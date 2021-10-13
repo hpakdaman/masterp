@@ -11,7 +11,6 @@ https://search.prtl.co/2018-07-23/?q=en-1519|di-24|ci-11|lv-master|uc-11|tc-USD|
 
 - filters : 
     disiplines      =>      di-111          [go to diciplines.json]
-
     countries       =>      ci-111          [go to countries.json]
     degree_type     =>      dg-msc,ma,..    [msc: Master of science , ma: Master of Art]  
     attendance      =>      mh-face2face    [facee2face: on campus learning]   
