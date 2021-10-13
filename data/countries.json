@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "1",
+    "name": "Netherlands",
+    "hasAreas": false,
+    "path": "netherlands",
+    "eea": true
+  },
+  {
+    "id": "30",
+    "name": "United Kingdom",
+    "hasAreas": true,
+    "path": "united-kingdom",
+    "eea": true
+  },
+  {
+    "id": "82",
+    "name": "United States",
+    "hasAreas": true,
+    "path": "united-states",
+    "eea": false
+  },
+  {
+    "id": "27",
+    "name": "Switzerland",
+    "hasAreas": false,
+    "path": "switzerland",
+    "eea": true
+  },
+  {
+    "id": "24",
+    "name": "Spain",
+    "hasAreas": false,
+    "path": "spain",
+    "eea": true
+  },
+  {
+    "id": "12",
+    "name": "Hungary",
+    "hasAreas": false,
+    "path": "hungary",
+    "eea": true
+  },
+  {
+    "id": "2",
+    "name": "Bulgaria",
+    "hasAreas": false,
+    "path": "bulgaria",
+    "eea": true
+  },
+  {
+    "id": "3",
+    "name": "Austria",
+    "hasAreas": false,
+    "path": "austria",
+    "eea": true
+  },
+  {
+    "id": "4",
+    "name": "Belgium",
+    "hasAreas": false,
+    "path": "belgium",
+    "eea": true
+  },
+  {
+    "id": "5",
+    "name": "Cyprus",
+    "hasAreas": false,
+    "path": "cyprus",
+    "eea": true
+  },
+  {
+    "id": "6",
+    "name": "Denmark",
+    "hasAreas": false,
+    "path": "denmark",
+    "eea": true
+  },
+  {
+    "id": "7",
+    "name": "Czech Republic",
+    "hasAreas": false,
+    "path": "czech-republic",
+    "eea": true
+  },
+  {
+    "id": "8",
+    "name": "Estonia",
+    "hasAreas": false,
+    "path": "estonia",
+    "eea": true
+  },
+  {
+    "id": "9",
+    "name": "Finland",
+    "hasAreas": false,
+    "path": "finland",
+    "eea": true
+  },
+  {
+    "id": "10",
+    "name": "France",
+    "hasAreas": false,
+    "path": "france",
+    "eea": true
+  },
+  {
+    "id": "11",
+    "name": "Germany",
+    "hasAreas": false,
+    "path": "germany",
+    "eea": true
+  },
+  {
+    "id": "13",
+    "name": "Iceland",
+    "hasAreas": false,
+    "path": "iceland",
+    "eea": true
+  },
+  {
+    "id": "14",
+    "name": "Ireland",
+    "hasAreas": false,
+    "path": "ireland",
+    "eea": true
+  },
+  {
+    "id": "15",
+    "name": "Italy",
+    "hasAreas": false,
+    "path": "italy",
+    "eea": true
+  },
+  {
+    "id": "16",
+    "name": "Latvia",
+    "hasAreas": false,
+    "path": "latvia",
+    "eea": true
+  },
+  {
+    "id": "17",
+    "name": "Lithuania",
+    "hasAreas": false,
+    "path": "lithuania",
+    "eea": true
+  },
+  {
+    "id": "18",
+    "name": "Macedonia (FYROM)",
+    "hasAreas": false,
+    "path": "macedonia",
+    "eea": false
+  },
+  {
+    "id": "19",
+    "name": "Norway",
+    "hasAreas": false,
+    "path": "norway",
+    "eea": true
+  },
+  {
+    "id": "20",
+    "name": "Poland",
+    "hasAreas": false,
+    "path": "poland",
+    "eea": true
+  },
+  {
+    "id": "21",
+    "name": "Portugal",
+    "hasAreas": false,
+    "path": "portugal",
+    "eea": true
+  },
+  {
+    "id": "22",
+    "name": "Russia",
+    "hasAreas": false,
+    "path": "russia",
+    "eea": false
+  },
+  {
+    "id": "23",
+    "name": "Serbia",
+    "hasAreas": false,
+    "path": "serbia",
+    "eea": false
+  },
+  {
+    "id": "25",
+    "name": "Greece",
+    "hasAreas": false,
+    "path": "greece",
+    "eea": true
+  },
+  {
+    "id": "26",
+    "name": "Sweden",
+    "hasAreas": false,
+    "path": "sweden",
+    "eea": true
+  },
+  {
+    "id": "28",
+    "name": "Turkey",
+    "hasAreas": false,
+    "path": "turkey",
+    "eea": false
+  },
+  {
+    "id": "29",
+    "name": "Ukraine",
+    "hasAreas": false,
+    "path": "ukraine",
+    "eea": false
+  },
+  {
+    "id": "31",
+    "name": "Slovenia",
+    "hasAreas": false,
+    "path": "slovenia",
+    "eea": true
+  },
+  {
+    "id": "33",
+    "name": "Romania",
+    "hasAreas": false,
+    "path": "romania",
+    "eea": true
+  },
+  {
+    "id": "34",
+    "name": "Luxembourg",
+    "hasAreas": false,
+    "path": "luxembourg",
+    "eea": true
+  },
+  {
+    "id": "35",
+    "name": "Malta",
+    "hasAreas": false,
+    "path": "malta",
+    "eea": true
+  },
+  {
+    "id": "36",
+    "name": "Monaco",
+    "hasAreas": false,
+    "path": "monaco",
+    "eea": false
+  },
+  {
+    "id": "37",
+    "name": "Moldova",
+    "hasAreas": false,
+    "path": "moldova",
+    "eea": false
+  },
+  {
+    "id": "38",
+    "name": "Croatia",
+    "hasAreas": false,
+    "path": "croatia",
+    "eea": true
+  },
+  {
+    "id": "39",
+    "name": "Montenegro",
+    "hasAreas": false,
+    "path": "montenegro",
+    "eea": false
+  },
+  {
+    "id": "40",
+    "name": "Bosnia and Herzegovina",
+    "hasAreas": false,
+    "path": "bosnia-and-herzegovina",
+    "eea": false
+  },
+  {
+    "id": "41",
+    "name": "Slovakia",
+    "hasAreas": false,
+    "path": "slovakia",
+    "eea": true
+  },
+  {
+    "id": "42",
+    "name": "Albania",
+    "hasAreas": false,
+    "path": "albania",
+    "eea": false
+  },
+  {
+    "id": "43",
+    "name": "Isle of Man",
+    "hasAreas": false,
+    "path": "isle-of-man",
+    "eea": false
+  },
+  {
+    "id": "44",
+    "name": "Andorra",
+    "hasAreas": false,
+    "path": "andorra",
+    "eea": false
+  },
+  {
+    "id": "45",
+    "name": "Belarus",
+    "hasAreas": false,
+    "path": "belarus",
+    "eea": false
+  },
+  {
+    "id": "46",
+    "name": "Faroe Islands",
+    "hasAreas": false,
+    "path": "faroe-islands",
+    "eea": false
+  },
+  {
+    "id": "47",
+    "name": "Liechtenstein",
+    "hasAreas": false,
+    "path": "liechtenstein",
+    "eea": true
+  },
+  {
+    "id": "48",
+    "name": "San Marino",
+    "hasAreas": false,
+    "path": "san-marino",
+    "eea": false
+  },
+  {
+    "id": "49",
+    "name": "Antigua and Barbuda",
+    "hasAreas": false,
+    "path": "antigua-and-barbuda",
+    "eea": false
+  },
+  {
+    "id": "50",
+    "name": "Aruba",
+    "hasAreas": false,
+    "path": "aruba",
+    "eea": false
+  },
+  {
+    "id": "51",
+    "name": "Bahamas",
+    "hasAreas": false,
+    "path": "bahamas",
+    "eea": false
+  },
+  {
+    "id": "52",
+    "name": "Barbados",
+    "hasAreas": false,
+    "path": "barbados",
+    "eea": false
+  },
+  {
+    "id": "53",
+    "name": "Belize",
+    "hasAreas": false,
+    "path": "belize",
+    "eea": false
+  },
+  {
+    "id": "54",
+    "name": "Bermuda",
+    "hasAreas": false,
+    "path": "bermude",
+    "eea": false
+  },
+  {
+    "id": "55",
+    "name": "British Virgin Islands",
+    "hasAreas": false,
+    "path": "british-virgin-islands",
+    "eea": false
+  },
+  {
+    "id": "56",
+    "name": "Canada",
+    "hasAreas": false,
+    "path": "canada",
+    "eea": false
+  },
+  {
+    "id": "57",
+    "name": "Cayman Islands",
+    "hasAreas": false,
+    "path": "cayman-islands",
+    "eea": false
+  },
+  {
+    "id": "58",
+    "name": "Costa Rica",
+    "hasAreas": false,
+    "path": "costa-rica",
+    "eea": false
+  },
+  {
+    "id": "59",
+    "name": "Cuba",
+    "hasAreas": false,
+    "path": "cuba",
+    "eea": false
+  },
+  {
+    "id": "60",
+    "name": "Dominica",
+    "hasAreas": false,
+    "path": "dominica",
+    "eea": false
+  },
+  {
+    "id": "61",
+    "name": "Dominican Republic",
+    "hasAreas": false,
+    "path": "dominican-republic",
+    "eea": false
+  },
+  {
+    "id": "62",
+    "name": "El Salvador",
+    "hasAreas": false,
+    "path": "el-salvador",
+    "eea": false
+  },
+  {
+    "id": "63",
+    "name": "Greenland",
+    "hasAreas": false,
+    "path": "greenland",
+    "eea": false
+  },
+  {
+    "id": "64",
+    "name": "Grenada",
+    "hasAreas": false,
+    "path": "grenada",
+    "eea": false
+  },
+  {
+    "id": "65",
+    "name": "Guadeloupe",
+    "hasAreas": false,
+    "path": "guadeloupe",
+    "eea": false
+  },
+  {
+    "id": "66",
+    "name": "Guatemala",
+    "hasAreas": false,
+    "path": "guatemala",
+    "eea": false
+  },
+  {
+    "id": "67",
+    "name": "Haiti",
+    "hasAreas": false,
+    "path": "haiti",
+    "eea": false
+  },
+  {
+    "id": "68",
+    "name": "Honduras",
+    "hasAreas": false,
+    "path": "honduras",
+    "eea": false
+  },
+  {
+    "id": "69",
+    "name": "Jamaica",
+    "hasAreas": false,
+    "path": "jamaica",
+    "eea": false
+  },
+  {
+    "id": "70",
+    "name": "Martinique",
+    "hasAreas": false,
+    "path": "martinique",
+    "eea": false
+  },
+  {
+    "id": "71",
+    "name": "Mexico",
+    "hasAreas": false,
+    "path": "mexico",
+    "eea": false
+  },
+  {
+    "id": "72",
+    "name": "Montserrat",
+    "hasAreas": false,
+    "path": "montserrat",
+    "eea": false
+  },
+  {
+    "id": "74",
+    "name": "Nicaragua",
+    "hasAreas": false,
+    "path": "nicaragua",
+    "eea": false
+  },
+  {
+    "id": "75",
+    "name": "Panama",
+    "hasAreas": false,
+    "path": "panama",
+    "eea": false
+  },
+  {
+    "id": "76",
+    "name": "Puerto Rico",
+    "hasAreas": false,
+    "path": "puerto-rico",
+    "eea": false
+  },
+  {
+    "id": "77",
+    "name": "Saint Kitts and Nevis",
+    "hasAreas": false,
+    "path": "saint-kitts-and-nevis",
+    "eea": false
+  },
+  {
+    "id": "78",
+    "name": "Saint Lucia",
+    "hasAreas": false,
+    "path": "saint-lucia",
+    "eea": false
+  },
+  {
+    "id": "79",
+    "name": "Saint Pierre and Miquelon",
+    "hasAreas": false,
+    "path": "saint-pierre-and-miquelon",
+    "eea": false
+  },
+  {
+    "id": "81",
+    "name": "Trinidad and Tobago",
+    "hasAreas": false,
+    "path": "trinidad-and-tobago",
+    "eea": false
+  },
+  {
+    "id": "83",
+    "name": "United States Virgin Islands",
+    "hasAreas": false,
+    "path": "united-states-virgin-islands",
+    "eea": false
+  },
+  {
+    "id": "84",
+    "name": "Argentina",
+    "hasAreas": false,
+    "path": "argentina",
+    "eea": false
+  },
+  {
+    "id": "85",
+    "name": "Bolivia",
+    "hasAreas": false,
+    "path": "bolivia",
+    "eea": false
+  },
+  {
+    "id": "86",
+    "name": "Brazil",
+    "hasAreas": false,
+    "path": "brazil",
+    "eea": false
+  },
+  {
+    "id": "87",
+    "name": "Chile",
+    "hasAreas": false,
+    "path": "chile",
+    "eea": false
+  },
+  {
+    "id": "88",
+    "name": "Colombia",
+    "hasAreas": false,
+    "path": "colombia",
+    "eea": false
+  },
+  {
+    "id": "89",
+    "name": "Ecuador",
+    "hasAreas": false,
+    "path": "ecuador",
+    "eea": false
+  },
+  {
+    "id": "90",
+    "name": "French Guiana",
+    "hasAreas": false,
+    "path": "french-guiana",
+    "eea": false
+  },
+  {
+    "id": "91",
+    "name": "Guyana",
+    "hasAreas": false,
+    "path": "guyana",
+    "eea": false
+  },
+  {
+    "id": "92",
+    "name": "Paraguay",
+    "hasAreas": false,
+    "path": "paraguay",
+    "eea": false
+  },
+  {
+    "id": "93",
+    "name": "Peru",
+    "hasAreas": false,
+    "path": "peru",
+    "eea": false
+  },
+  {
+    "id": "94",
+    "name": "Suriname",
+    "hasAreas": false,
+    "path": "suriname",
+    "eea": false
+  },
+  {
+    "id": "95",
+    "name": "Uruguay",
+    "hasAreas": false,
+    "path": "uruguay",
+    "eea": false
+  },
+  {
+    "id": "96",
+    "name": "Venezuela",
+    "hasAreas": false,
+    "path": "venezuela",
+    "eea": false
+  },
+  {
+    "id": "97",
+    "name": "Afghanistan",
+    "hasAreas": false,
+    "path": "afghanistan",
+    "eea": false
+  },
+  {
+    "id": "98",
+    "name": "Armenia",
+    "hasAreas": false,
+    "path": "armenia",
+    "eea": false
+  },
+  {
+    "id": "99",
+    "name": "Azerbaijan",
+    "hasAreas": false,
+    "path": "azerbaijan",
+    "eea": false
+  },
+  {
+    "id": "100",
+    "name": "Bahrain",
+    "hasAreas": false,
+    "path": "bahrain",
+    "eea": false
+  },
+  {
+    "id": "101",
+    "name": "Bangladesh",
+    "hasAreas": false,
+    "path": "bangladesh",
+    "eea": false
+  },
+  {
+    "id": "102",
+    "name": "Bhutan",
+    "hasAreas": false,
+    "path": "bhutan",
+    "eea": false
+  },
+  {
+    "id": "103",
+    "name": "Brunei",
+    "hasAreas": false,
+    "path": "brunei",
+    "eea": false
+  },
+  {
+    "id": "104",
+    "name": "Cambodia",
+    "hasAreas": false,
+    "path": "cambodia",
+    "eea": false
+  },
+  {
+    "id": "105",
+    "name": "China",
+    "hasAreas": false,
+    "path": "china",
+    "eea": false
+  },
+  {
+    "id": "106",
+    "name": "Georgia",
+    "hasAreas": false,
+    "path": "georgia",
+    "eea": false
+  },
+  {
+    "id": "107",
+    "name": "Hong Kong (SAR)",
+    "hasAreas": false,
+    "path": "hong-kong",
+    "eea": false
+  },
+  {
+    "id": "108",
+    "name": "India",
+    "hasAreas": false,
+    "path": "india",
+    "eea": false
+  },
+  {
+    "id": "109",
+    "name": "Indonesia",
+    "hasAreas": false,
+    "path": "indonesia",
+    "eea": false
+  },
+  {
+    "id": "110",
+    "name": "Iran",
+    "hasAreas": false,
+    "path": "iran",
+    "eea": false
+  },
+  {
+    "id": "111",
+    "name": "Iraq",
+    "hasAreas": false,
+    "path": "iraq",
+    "eea": false
+  },
+  {
+    "id": "112",
+    "name": "Israel",
+    "hasAreas": false,
+    "path": "israel",
+    "eea": false
+  },
+  {
+    "id": "113",
+    "name": "Japan",
+    "hasAreas": false,
+    "path": "japan",
+    "eea": false
+  },
+  {
+    "id": "114",
+    "name": "Jordan",
+    "hasAreas": false,
+    "path": "jordan",
+    "eea": false
+  },
+  {
+    "id": "115",
+    "name": "Kazakhstan",
+    "hasAreas": false,
+    "path": "kazakhstan",
+    "eea": false
+  },
+  {
+    "id": "116",
+    "name": "North Korea",
+    "hasAreas": false,
+    "path": "north-korea",
+    "eea": false
+  },
+  {
+    "id": "117",
+    "name": "South Korea",
+    "hasAreas": false,
+    "path": "south-korea",
+    "eea": false
+  },
+  {
+    "id": "118",
+    "name": "Kuwait",
+    "hasAreas": false,
+    "path": "kuwait",
+    "eea": false
+  },
+  {
+    "id": "119",
+    "name": "Kyrgyzstan",
+    "hasAreas": false,
+    "path": "kyrgyzstan",
+    "eea": false
+  },
+  {
+    "id": "120",
+    "name": "Laos",
+    "hasAreas": false,
+    "path": "laos",
+    "eea": false
+  },
+  {
+    "id": "121",
+    "name": "Lebanon",
+    "hasAreas": false,
+    "path": "lebanon",
+    "eea": false
+  },
+  {
+    "id": "122",
+    "name": "Macao (SAR)",
+    "hasAreas": false,
+    "path": "macao",
+    "eea": false
+  },
+  {
+    "id": "123",
+    "name": "Malaysia",
+    "hasAreas": false,
+    "path": "malaysia",
+    "eea": false
+  },
+  {
+    "id": "124",
+    "name": "Maldives",
+    "hasAreas": false,
+    "path": "maldives",
+    "eea": false
+  },
+  {
+    "id": "125",
+    "name": "Mongolia",
+    "hasAreas": false,
+    "path": "mongolia",
+    "eea": false
+  },
+  {
+    "id": "126",
+    "name": "Myanmar",
+    "hasAreas": false,
+    "path": "myanmar",
+    "eea": false
+  },
+  {
+    "id": "127",
+    "name": "Nepal",
+    "hasAreas": false,
+    "path": "nepal",
+    "eea": false
+  },
+  {
+    "id": "128",
+    "name": "Oman",
+    "hasAreas": false,
+    "path": "oman",
+    "eea": false
+  },
+  {
+    "id": "129",
+    "name": "Pakistan",
+    "hasAreas": false,
+    "path": "pakistan",
+    "eea": false
+  },
+  {
+    "id": "130",
+    "name": "Philippines",
+    "hasAreas": false,
+    "path": "philippines",
+    "eea": false
+  },
+  {
+    "id": "131",
+    "name": "Qatar",
+    "hasAreas": false,
+    "path": "qatar",
+    "eea": false
+  },
+  {
+    "id": "132",
+    "name": "Saudi Arabia",
+    "hasAreas": false,
+    "path": "saudi-arabia",
+    "eea": false
+  },
+  {
+    "id": "133",
+    "name": "Singapore",
+    "hasAreas": false,
+    "path": "singapore",
+    "eea": false
+  },
+  {
+    "id": "134",
+    "name": "Sri Lanka",
+    "hasAreas": false,
+    "path": "sri-lanka",
+    "eea": false
+  },
+  {
+    "id": "135",
+    "name": "Syria",
+    "hasAreas": false,
+    "path": "syria",
+    "eea": false
+  },
+  {
+    "id": "136",
+    "name": "Taiwan",
+    "hasAreas": false,
+    "path": "taiwan",
+    "eea": false
+  },
+  {
+    "id": "137",
+    "name": "Tajikistan",
+    "hasAreas": false,
+    "path": "tajikistan",
+    "eea": false
+  },
+  {
+    "id": "138",
+    "name": "Thailand",
+    "hasAreas": false,
+    "path": "thailand",
+    "eea": false
+  },
+  {
+    "id": "139",
+    "name": "Turkmenistan",
+    "hasAreas": false,
+    "path": "turkmenistan",
+    "eea": false
+  },
+  {
+    "id": "140",
+    "name": "United Arab Emirates",
+    "hasAreas": false,
+    "path": "united-arab-emirates",
+    "eea": false
+  },
+  {
+    "id": "141",
+    "name": "Uzbekistan",
+    "hasAreas": false,
+    "path": "uzbekistan",
+    "eea": false
+  },
+  {
+    "id": "142",
+    "name": "Vietnam",
+    "hasAreas": false,
+    "path": "vietnam",
+    "eea": false
+  },
+  {
+    "id": "143",
+    "name": "Yemen",
+    "hasAreas": false,
+    "path": "yemen",
+    "eea": false
+  },
+  {
+    "id": "144",
+    "name": "Palestinian Territory, Occupied",
+    "hasAreas": false,
+    "path": "palestinian-territory-occupied",
+    "eea": false
+  },
+  {
+    "id": "145",
+    "name": "Algeria",
+    "hasAreas": false,
+    "path": "algeria",
+    "eea": false
+  },
+  {
+    "id": "146",
+    "name": "Angola",
+    "hasAreas": false,
+    "path": "angola",
+    "eea": false
+  },
+  {
+    "id": "147",
+    "name": "Benin",
+    "hasAreas": false,
+    "path": "benin",
+    "eea": false
+  },
+  {
+    "id": "148",
+    "name": "Botswana",
+    "hasAreas": false,
+    "path": "botswana",
+    "eea": false
+  },
+  {
+    "id": "149",
+    "name": "Burkina Faso",
+    "hasAreas": false,
+    "path": "burkina-faso",
+    "eea": false
+  },
+  {
+    "id": "150",
+    "name": "Burundi",
+    "hasAreas": false,
+    "path": "burundi",
+    "eea": false
+  },
+  {
+    "id": "151",
+    "name": "Cameroon",
+    "hasAreas": false,
+    "path": "cameroon",
+    "eea": false
+  },
+  {
+    "id": "152",
+    "name": "Cape Verde",
+    "hasAreas": false,
+    "path": "cape-verde",
+    "eea": false
+  },
+  {
+    "id": "153",
+    "name": "Central African Republic",
+    "hasAreas": false,
+    "path": "central-african-republic",
+    "eea": false
+  },
+  {
+    "id": "154",
+    "name": "Chad",
+    "hasAreas": false,
+    "path": "chad",
+    "eea": false
+  },
+  {
+    "id": "155",
+    "name": "Comoros",
+    "hasAreas": false,
+    "path": "comoros",
+    "eea": false
+  },
+  {
+    "id": "157",
+    "name": "Congo (Republic of the)",
+    "hasAreas": false,
+    "path": "congo",
+    "eea": false
+  },
+  {
+    "id": "158",
+    "name": "CÃ´te d\"Ivoire",
+    "hasAreas": false,
+    "path": "cte-divoire",
+    "eea": false
+  },
+  {
+    "id": "159",
+    "name": "Djibouti",
+    "hasAreas": false,
+    "path": "djibouti",
+    "eea": false
+  },
+  {
+    "id": "160",
+    "name": "Timor-Leste",
+    "hasAreas": false,
+    "path": "timor-leste",
+    "eea": false
+  },
+  {
+    "id": "161",
+    "name": "Egypt",
+    "hasAreas": false,
+    "path": "egypt",
+    "eea": false
+  },
+  {
+    "id": "162",
+    "name": "Equatorial Guinea",
+    "hasAreas": false,
+    "path": "equatorial-guinea",
+    "eea": false
+  },
+  {
+    "id": "163",
+    "name": "Eritrea",
+    "hasAreas": false,
+    "path": "eritrea",
+    "eea": false
+  },
+  {
+    "id": "164",
+    "name": "Ethiopia",
+    "hasAreas": false,
+    "path": "ethiopia",
+    "eea": false
+  },
+  {
+    "id": "165",
+    "name": "Gabon",
+    "hasAreas": false,
+    "path": "gabon",
+    "eea": false
+  },
+  {
+    "id": "166",
+    "name": "Gambia",
+    "hasAreas": false,
+    "path": "gambia",
+    "eea": false
+  },
+  {
+    "id": "167",
+    "name": "Ghana",
+    "hasAreas": false,
+    "path": "ghana",
+    "eea": false
+  },
+  {
+    "id": "168",
+    "name": "Guinea",
+    "hasAreas": false,
+    "path": "guinea",
+    "eea": false
+  },
+  {
+    "id": "169",
+    "name": "Guinea-Bissau",
+    "hasAreas": false,
+    "path": "guinea-bissau",
+    "eea": false
+  },
+  {
+    "id": "170",
+    "name": "Kenya",
+    "hasAreas": false,
+    "path": "kenya",
+    "eea": false
+  },
+  {
+    "id": "171",
+    "name": "Lesotho",
+    "hasAreas": false,
+    "path": "lesotho",
+    "eea": false
+  },
+  {
+    "id": "172",
+    "name": "Liberia",
+    "hasAreas": false,
+    "path": "liberia",
+    "eea": false
+  },
+  {
+    "id": "173",
+    "name": "Libya",
+    "hasAreas": false,
+    "path": "libya",
+    "eea": false
+  },
+  {
+    "id": "174",
+    "name": "Madagascar",
+    "hasAreas": false,
+    "path": "madagascar",
+    "eea": false
+  },
+  {
+    "id": "175",
+    "name": "Malawi",
+    "hasAreas": false,
+    "path": "malawi",
+    "eea": false
+  },
+  {
+    "id": "176",
+    "name": "Mali",
+    "hasAreas": false,
+    "path": "mali",
+    "eea": false
+  },
+  {
+    "id": "177",
+    "name": "Mauritania",
+    "hasAreas": false,
+    "path": "mauritania",
+    "eea": false
+  },
+  {
+    "id": "178",
+    "name": "Mauritius",
+    "hasAreas": false,
+    "path": "mauritius",
+    "eea": false
+  },
+  {
+    "id": "179",
+    "name": "Morocco",
+    "hasAreas": false,
+    "path": "morocco",
+    "eea": false
+  },
+  {
+    "id": "180",
+    "name": "Mozambique",
+    "hasAreas": false,
+    "path": "mozambique",
+    "eea": false
+  },
+  {
+    "id": "181",
+    "name": "Namibia",
+    "hasAreas": false,
+    "path": "namibia",
+    "eea": false
+  },
+  {
+    "id": "182",
+    "name": "Niger",
+    "hasAreas": false,
+    "path": "niger",
+    "eea": false
+  },
+  {
+    "id": "183",
+    "name": "Nigeria",
+    "hasAreas": false,
+    "path": "nigeria",
+    "eea": false
+  },
+  {
+    "id": "184",
+    "name": "RÃ©union",
+    "hasAreas": false,
+    "path": "runion",
+    "eea": false
+  },
+  {
+    "id": "185",
+    "name": "Rwanda",
+    "hasAreas": false,
+    "path": "rwanda",
+    "eea": false
+  },
+  {
+    "id": "186",
+    "name": "SÃ£o TomÃ© and PrÃ­ncipe",
+    "hasAreas": false,
+    "path": "so-tom-and-prncipe",
+    "eea": false
+  },
+  {
+    "id": "187",
+    "name": "Senegal",
+    "hasAreas": false,
+    "path": "senegal",
+    "eea": false
+  },
+  {
+    "id": "188",
+    "name": "Seychelles",
+    "hasAreas": false,
+    "path": "seychelles",
+    "eea": false
+  },
+  {
+    "id": "189",
+    "name": "Sierra Leone",
+    "hasAreas": false,
+    "path": "sierra-leone",
+    "eea": false
+  },
+  {
+    "id": "190",
+    "name": "Somalia",
+    "hasAreas": false,
+    "path": "somalia",
+    "eea": false
+  },
+  {
+    "id": "191",
+    "name": "South Africa",
+    "hasAreas": false,
+    "path": "south-africa",
+    "eea": false
+  },
+  {
+    "id": "192",
+    "name": "Sudan",
+    "hasAreas": false,
+    "path": "sudan",
+    "eea": false
+  },
+  {
+    "id": "193",
+    "name": "Swaziland",
+    "hasAreas": false,
+    "path": "swaziland",
+    "eea": false
+  },
+  {
+    "id": "194",
+    "name": "Tanzania",
+    "hasAreas": false,
+    "path": "tanzania",
+    "eea": false
+  },
+  {
+    "id": "195",
+    "name": "Togo",
+    "hasAreas": false,
+    "path": "togo",
+    "eea": false
+  },
+  {
+    "id": "196",
+    "name": "Tunisia",
+    "hasAreas": false,
+    "path": "tunisia",
+    "eea": false
+  },
+  {
+    "id": "197",
+    "name": "Uganda",
+    "hasAreas": false,
+    "path": "uganda",
+    "eea": false
+  },
+  {
+    "id": "198",
+    "name": "Western Sahara",
+    "hasAreas": false,
+    "path": "western sahara",
+    "eea": false
+  },
+  {
+    "id": "199",
+    "name": "Zambia",
+    "hasAreas": false,
+    "path": "zambia",
+    "eea": false
+  },
+  {
+    "id": "200",
+    "name": "Zimbabwe",
+    "hasAreas": false,
+    "path": "zimbabwe",
+    "eea": false
+  },
+  {
+    "id": "201",
+    "name": "American Samoa",
+    "hasAreas": false,
+    "path": "american-samoa",
+    "eea": false
+  },
+  {
+    "id": "202",
+    "name": "Australia",
+    "hasAreas": true,
+    "path": "australia",
+    "eea": false
+  },
+  {
+    "id": "203",
+    "name": "Cook Islands",
+    "hasAreas": false,
+    "path": "cook-islands",
+    "eea": false
+  },
+  {
+    "id": "204",
+    "name": "Fiji",
+    "hasAreas": false,
+    "path": "fiji",
+    "eea": false
+  },
+  {
+    "id": "205",
+    "name": "French Polynesia",
+    "hasAreas": false,
+    "path": "french-polynesia",
+    "eea": false
+  },
+  {
+    "id": "206",
+    "name": "Guam",
+    "hasAreas": false,
+    "path": "guam",
+    "eea": false
+  },
+  {
+    "id": "207",
+    "name": "Kiribati",
+    "hasAreas": false,
+    "path": "kiribati",
+    "eea": false
+  },
+  {
+    "id": "208",
+    "name": "Marshall Islands",
+    "hasAreas": false,
+    "path": "marshall-islands",
+    "eea": false
+  },
+  {
+    "id": "210",
+    "name": "Nauru",
+    "hasAreas": false,
+    "path": "nauru",
+    "eea": false
+  },
+  {
+    "id": "211",
+    "name": "New Caledonia",
+    "hasAreas": false,
+    "path": "new-caledonia",
+    "eea": false
+  },
+  {
+    "id": "212",
+    "name": "New Zealand",
+    "hasAreas": false,
+    "path": "new-zealand",
+    "eea": false
+  },
+  {
+    "id": "213",
+    "name": "Niue",
+    "hasAreas": false,
+    "path": "niue",
+    "eea": false
+  },
+  {
+    "id": "214",
+    "name": "Northern Mariana Islands",
+    "hasAreas": false,
+    "path": "northern-mariana-islands",
+    "eea": false
+  },
+  {
+    "id": "215",
+    "name": "Palau",
+    "hasAreas": false,
+    "path": "palau",
+    "eea": false
+  },
+  {
+    "id": "216",
+    "name": "Papua New Guinea",
+    "hasAreas": false,
+    "path": "papua-new-guinea",
+    "eea": false
+  },
+  {
+    "id": "217",
+    "name": "Samoa",
+    "hasAreas": false,
+    "path": "samoa",
+    "eea": false
+  },
+  {
+    "id": "218",
+    "name": "Solomon Islands",
+    "hasAreas": false,
+    "path": "solomon-islands",
+    "eea": false
+  },
+  {
+    "id": "219",
+    "name": "Tonga",
+    "hasAreas": false,
+    "path": "tonga",
+    "eea": false
+  },
+  {
+    "id": "220",
+    "name": "Tuvalu",
+    "hasAreas": false,
+    "path": "tuvalu",
+    "eea": false
+  },
+  {
+    "id": "221",
+    "name": "Vanuatu",
+    "hasAreas": false,
+    "path": "vanuatu",
+    "eea": false
+  },
+  {
+    "id": "222",
+    "name": "Saint BarthÃ©lemy",
+    "hasAreas": false,
+    "path": "saint-barthlemy",
+    "eea": false
+  },
+  {
+    "id": "223",
+    "name": "Sint Maarten",
+    "hasAreas": false,
+    "path": "sint-maarten",
+    "eea": false
+  },
+  {
+    "id": "224",
+    "name": "Anguilla",
+    "hasAreas": false,
+    "path": "anguilla",
+    "eea": false
+  },
+  {
+    "id": "225",
+    "name": "CuraÃ§ao",
+    "hasAreas": false,
+    "path": "curaÃ§ao",
+    "eea": false
+  },
+  {
+    "id": "226",
+    "name": "Turks and Caicos Islands",
+    "hasAreas": false,
+    "path": "turks-and-caicos-islands",
+    "eea": false
+  },
+  {
+    "id": "229",
+    "name": "Cyprus, northern part *",
+    "hasAreas": false,
+    "path": "northern-cyprus",
+    "eea": false
+  },
+  {
+    "id": "230",
+    "name": "Kosovo",
+    "hasAreas": false,
+    "path": "kosovo",
+    "eea": false
+  },
+  {
+    "id": "232",
+    "name": "South Sudan",
+    "hasAreas": false,
+    "path": "south-sudan",
+    "eea": false
+  }
+]

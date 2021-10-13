@@ -1,0 +1,310 @@
+[
+  {
+    "id": 54,
+    "name": "Agriculture & Forestry",
+    "icon": "lnr-tree",
+    "subDisciplines": [
+      { "id": 300, "name": "Agriculture" },
+      { "id": 301, "name": "Animal Sciences" },
+      { "id": 302, "name": "Aquaculture & Fisheries" },
+      { "id": 303, "name": "Forestry" },
+      { "id": 304, "name": "Horticulture" },
+      { "id": 305, "name": "Plant & Crop Sciences" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Applied Sciences & Professions",
+    "icon": "lnr-microscope",
+    "subDisciplines": [
+      { "id": 297, "name": "Emergency & Disaster Management" },
+      { "id": 56, "name": "Family & Consumer Science" },
+      { "id": 132, "name": "Fashion, Textiles and Luxury Goods" },
+      { "id": 298, "name": "Food Sciences" },
+      { "id": 112, "name": "Forensic Science" },
+      { "id": 59, "name": "Library Science" },
+      { "id": 60, "name": "Military Science" },
+      { "id": 299, "name": "Museum Studies" },
+      { "id": 321, "name": "Real Estate & Property Management" },
+      { "id": 62, "name": "Social Work" }
+    ]
+  },
+  {
+    "id": 258,
+    "name": "Arts, Design & Architecture",
+    "icon": "lnr-magic-wand",
+    "subDisciplines": [
+      { "id": 20, "name": "Architecture" },
+      { "id": 259, "name": "Art History" },
+      { "id": 63, "name": "Design" },
+      { "id": 260, "name": "Fashion Design" },
+      { "id": 69, "name": "Film, Photography & Media" },
+      { "id": 261, "name": "Graphic Design" },
+      { "id": 53, "name": "Industrial Design" },
+      { "id": 262, "name": "Interior Design" },
+      { "id": 263, "name": "Landscape Architecture" },
+      { "id": 104, "name": "Music" },
+      { "id": 264, "name": "Music History" },
+      { "id": 318, "name": "Theatre & Dance" },
+      { "id": 265, "name": "User Experience Design" },
+      { "id": 68, "name": "Visual Arts" },
+      { "id": 328, "name": "Urban Planning" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Business & Management",
+    "icon": "lnr-briefcase",
+    "subDisciplines": [
+      { "id": 93, "name": "Accounting" },
+      { "id": 232, "name": "Agribusiness" },
+      { "id": 233, "name": "Auditing" },
+      { "id": 45, "name": "Business Administration" },
+      { "id": 234, "name": "Business Intelligence & Analytics" },
+      { "id": 235, "name": "Commerce" },
+      { "id": 236, "name": "Corporate Communication" },
+      { "id": 237, "name": "Corporate Social Responsibility" },
+      { "id": 86, "name": "Entrepreneurship" },
+      { "id": 238, "name": "Executive MBA" },
+      { "id": 87, "name": "Finance" },
+      { "id": 239, "name": "Forensic Accounting" },
+      { "id": 111, "name": "Human Resource Management" },
+      { "id": 240, "name": "Innovation Management" },
+      { "id": 241, "name": "International Business" },
+      { "id": 89, "name": "Management, Organisation & Leadership" },
+      { "id": 88, "name": "Marketing" },
+      { "id": 242, "name": "Master in Business Administration (MBA)" },
+      { "id": 243, "name": "Master in Management (MIM)" },
+      { "id": 25, "name": "Project Management" },
+      { "id": 101, "name": "Public Administration" },
+      { "id": 244, "name": "Retail Management" },
+      { "id": 245, "name": "Risk Management" },
+      { "id": 246, "name": "Strategic Management" },
+      { "id": 133, "name": "Supply Chain Management & Logistics" },
+      { "id": 247, "name": "Taxation" },
+      { "id": 248, "name": "Technology Management" },
+      { "id": 249, "name": "Transport Management" },
+      { "id": 322, "name": "Digital Communication" },
+      { "id": 324, "name": "Digital Marketing" },
+      { "id": 325, "name": "Actuarial Science" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Computer Science & IT",
+    "icon": "lnr-cli",
+    "subDisciplines": [
+      { "id": 279, "name": "Business Information Systems" },
+      { "id": 281, "name": "Computer Sciences" },
+      { "id": 282, "name": "Data Science & Big Data" },
+      { "id": 130, "name": "Geographical Information Systems (GIS)" },
+      { "id": 283, "name": "Health Informatics" },
+      { "id": 284, "name": "Human Computer Interaction" },
+      { "id": 108, "name": "Informatics & Information Sciences" },
+      { "id": 285, "name": "IT Security" },
+      { "id": 280, "name": "Video Games & Multimedia" },
+      { "id": 286, "name": "Web Technologies & Cloud Computing" },
+      { "id": 323, "name": "Cyber Security" },
+      { "id": 329, "name": "Software Engineering" },
+      { "id": 330, "name": "Artificial Intelligence" },
+      { "id": 331, "name": "Machine Learning" }
+    ]
+  },
+  {
+    "id": 289,
+    "name": "Education & Training",
+    "icon": "lnr-book2",
+    "subDisciplines": [
+      { "id": 290, "name": "Adult Education" },
+      { "id": 291, "name": "Coaching" },
+      { "id": 292, "name": "Counselling" },
+      { "id": 8, "name": "Education" },
+      { "id": 293, "name": "Educational Psychology" },
+      { "id": 98, "name": "Educational Research" },
+      { "id": 294, "name": "Pedagogy" },
+      { "id": 97, "name": "Special Education" },
+      { "id": 295, "name": "Teaching" },
+      { "id": 333, "name": "Early Childhood Education" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Engineering & Technology",
+    "icon": "lnr-rulers",
+    "subDisciplines": [
+      { "id": 37, "name": "Aerospace Engineering" },
+      { "id": 250, "name": "Automotive Engineering" },
+      { "id": 30, "name": "Bio & Biomedical Engineering" },
+      { "id": 32, "name": "Chemical Engineering" },
+      { "id": 29, "name": "Civil Engineering & Construction" },
+      { "id": 34, "name": "Electrical Engineering" },
+      { "id": 83, "name": "Electronics & Embedded Technology" },
+      { "id": 94, "name": "Energy & Power Engineering" },
+      { "id": 28, "name": "Environmental Engineering" },
+      { "id": 251, "name": "General Engineering & Technology" },
+      { "id": 26, "name": "Industrial & Systems Engineering" },
+      { "id": 252, "name": "Marine Engineering" },
+      { "id": 33, "name": "Materials Science & Engineering" },
+      { "id": 39, "name": "Mechanical Engineering" },
+      { "id": 253, "name": "Mechatronics" },
+      { "id": 254, "name": "Mining, Oil & Gas" },
+      { "id": 255, "name": "Robotics" },
+      { "id": 256, "name": "Sustainable Energy" },
+      { "id": 257, "name": "Transportation Engineering" }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Environmental Studies & Earth Sciences",
+    "icon": "lnr-earth",
+    "subDisciplines": [
+      { "id": 126, "name": "Biodiversity & Conservation" },
+      { "id": 125, "name": "Climate Studies & Meteorology" },
+      { "id": 47, "name": "Earth Sciences" },
+      { "id": 314, "name": "Ecology" },
+      { "id": 128, "name": "Environmental Economics & Policy" },
+      { "id": 287, "name": "Environmental Management" },
+      { "id": 315, "name": "Environmental Sciences" },
+      { "id": 123, "name": "Geology" },
+      { "id": 124, "name": "Hydrology & Water Management" },
+      { "id": 288, "name": "Natural Resource Management" },
+      { "id": 122, "name": "Soil Science" },
+      { "id": 127, "name": "Sustainable Development" },
+      { "id": 119, "name": "Toxicology" }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Hospitality, Leisure & Sports",
+    "icon": "lnr-boat",
+    "subDisciplines": [
+      { "id": 312, "name": "Culinary Arts" },
+      { "id": 313, "name": "Event Management" },
+      { "id": 311, "name": "Hospitality Management" },
+      { "id": 134, "name": "Sports Management" },
+      { "id": 317, "name": "Sports Sciences" },
+      { "id": 319, "name": "Tourism & Leisure" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Humanities",
+    "icon": "lnr-pen2",
+    "subDisciplines": [
+      { "id": 266, "name": "Ancient History" },
+      { "id": 267, "name": "Christian Studies" },
+      { "id": 268, "name": "Creative Writing" },
+      { "id": 269, "name": "General Studies & Classics" },
+      { "id": 74, "name": "History" },
+      { "id": 270, "name": "Islamic Studies" },
+      { "id": 77, "name": "Language Studies" },
+      { "id": 91, "name": "Languages" },
+      { "id": 271, "name": "Liberal Arts" },
+      { "id": 272, "name": "Literature" },
+      { "id": 273, "name": "Modern History" },
+      { "id": 84, "name": "Philosophy & Ethics" },
+      { "id": 99, "name": "Religious Studies & Theology" },
+      { "id": 332, "name": "Linguistics" }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Journalism & Media",
+    "icon": "lnr-camera",
+    "subDisciplines": [
+      { "id": 306, "name": "Journalism" },
+      { "id": 307, "name": "Media Management" },
+      { "id": 308, "name": "Media Studies & Mass Media" },
+      { "id": 309, "name": "Public Relations" },
+      { "id": 310, "name": "Translation & Interpreting" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Law",
+    "icon": "lnr-balance",
+    "subDisciplines": [
+      { "id": 219, "name": "Business Law" },
+      { "id": 114, "name": "Civil & Private Law" },
+      { "id": 109, "name": "Criminal Law" },
+      { "id": 48, "name": "European Law" },
+      { "id": 85, "name": "International Law" },
+      { "id": 220, "name": "Legal Studies" },
+      { "id": 221, "name": "Master of Laws (LLM)" },
+      { "id": 49, "name": "Patent & Intellectual Property Law" },
+      { "id": 115, "name": "Public Law" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Medicine & Health",
+    "icon": "lnr-first-aid",
+    "subDisciplines": [
+      { "id": 31, "name": "Biomedicine" },
+      { "id": 228, "name": "Complementary & Alternative Medicine" },
+      { "id": 100, "name": "Dentistry" },
+      { "id": 229, "name": "Health Management" },
+      { "id": 230, "name": "Health Sciences" },
+      { "id": 92, "name": "Human Medicine" },
+      { "id": 231, "name": "Midwifery" },
+      { "id": 113, "name": "Nursing" },
+      { "id": 131, "name": "Nutrition & Dietetics" },
+      { "id": 106, "name": "Pharmacy" },
+      { "id": 105, "name": "Physiotherapy" },
+      { "id": 90, "name": "Public Health" },
+      { "id": 107, "name": "Veterinary Medicine" },
+      { "id": 335, "name": "Clinical Psychology" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Natural Sciences & Mathematics",
+    "icon": "lnr-beaker",
+    "subDisciplines": [
+      { "id": 52, "name": "Applied Mathematics" },
+      { "id": 82, "name": "Astronomy & Space Sciences" },
+      { "id": 81, "name": "Biology" },
+      { "id": 118, "name": "Biotechnology" },
+      { "id": 46, "name": "Chemistry" },
+      { "id": 223, "name": "Financial Mathematics" },
+      { "id": 40, "name": "Mathematics" },
+      { "id": 224, "name": "Microbiology" },
+      { "id": 225, "name": "Molecular Sciences" },
+      { "id": 222, "name": "Natural Sciences" },
+      { "id": 226, "name": "Neuroscience" },
+      { "id": 38, "name": "Physics" },
+      { "id": 227, "name": "Statistics" },
+      { "id": 326, "name": "Bioinformatics" },
+      { "id": 327, "name": "Biochemistry" },
+      { "id": 334, "name": "Genetics" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Social Sciences",
+    "icon": "lnr-bubbles",
+    "subDisciplines": [
+      { "id": 274, "name": "American Studies" },
+      { "id": 72, "name": "Anthropology" },
+      { "id": 70, "name": "Archaeology" },
+      { "id": 67, "name": "Area & Cultural Studies" },
+      { "id": 275, "name": "Cognitive Sciences" },
+      { "id": 71, "name": "Communication Sciences" },
+      { "id": 276, "name": "Criminology" },
+      { "id": 110, "name": "Econometrics" },
+      { "id": 4, "name": "Economics" },
+      { "id": 73, "name": "Ethnic Studies" },
+      { "id": 277, "name": "European Studies" },
+      { "id": 76, "name": "Gender & Sexuality Studies" },
+      { "id": 75, "name": "Geography" },
+      { "id": 102, "name": "International Development" },
+      { "id": 78, "name": "International Relations" },
+      { "id": 103, "name": "Organisational Behaviour" },
+      { "id": 316, "name": "Political Science" },
+      { "id": 79, "name": "Psychology" },
+      { "id": 278, "name": "Public Policy" },
+      { "id": 80, "name": "Sociology" },
+      { "id": 320, "name": "Terrorism & Security" }
+    ]
+  }
+]
