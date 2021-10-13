@@ -1,10 +1,12 @@
-# Get list of all universities
+# My first Python Project
+
+## Get all lists
 https://reviews.prtl.co/v1/universities
 
-# Get one university detail
+## Get one detail
 https://reviews.prtl.co/v1/universities/17679
 
-# find university list base on country and other filters
+## find one with filter
 https://search.prtl.co/2018-07-23/?q=en-1519|di-24|ci-11|lv-master|uc-11|tc-USD|ur-38&size=10000&start=0
 
 - filters : 
@@ -17,9 +19,5 @@ https://search.prtl.co/2018-07-23/?q=en-1519|di-24|ci-11|lv-master|uc-11|tc-USD|
     duration        =>      dur-[720,720]   [[720,720]: 2 year , [540,540]: 1.5 year ,[360,360]: 1 year]tuituion fee    =>      tr-[1000,5000]  [[from,to]]
     limit           =>      &size=20
 
-# Get program data
+## Get program data
 https://reflector.prtl.co/?length=0&include_order=false&token=6948be1c12fa11a99529378cedd4b4bcf6e86fa8&q=id-274668&path=data/studies/any/details/
-
-
-# awaring of all active scolarships
-https://www.scholarshipportal.com
