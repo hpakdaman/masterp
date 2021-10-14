@@ -186,20 +186,21 @@ def get_program(id):
     program['url'] = list(data['links'].values())[0]['url']
 
     #  master portal link
-    program['masterp_url'] = 'https://masterportal.com/studies/'+str(data['id'])
+    program['masterp_url'] = 'https://www.mastersportal.com/studies/'+str(data['id'])
 
     # deadline
     sep = ''
     program['start'] = ''
-    for item in data['study_startdates'].values():
-        if item['study_deadlines']:
-            date_deadline = next((ditem for ditem in item['study_deadlines'].values(
-            ) if ditem['type'] == 'international'), {'date_deadline': '-'})['date_deadline']
-        else:
-            date_deadline = '-'
-        program['start'] += sep+'start: ' + \
-            item['date_start']+'  deadline: '+date_deadline
-        sep = os.linesep
+    if data['study_startdates']:
+        for item in data['study_startdates'].values():
+            if item['study_deadlines']:
+                date_deadline = next((ditem for ditem in item['study_deadlines'].values(
+                ) if ditem['type'] == 'international'), {'date_deadline': '-'})['date_deadline']
+            else:
+                date_deadline = '-'
+            program['start'] += sep+'start: ' + \
+                item['date_start']+'  deadline: '+date_deadline
+            sep = os.linesep
 
     # tuition_fee_types
     program['tuition_fee'] = next((item for item in data['tuition_fee_types']
@@ -210,26 +211,33 @@ def get_program(id):
 # ...........
 
 
-programs = get_all_programs(
-    disiplines='24',  # computer science 24 , humanity : 11
-    countries='82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21',  # germany : 11 ,   multi : 82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21
-    tuituion='[0,7000]',
-    duration='[720,720][540,540],[360,360]',
-    attendance='face2face',
-    degree_type='msc',
-    limit=10000 # should be less than or equal to 10000
-)
+config={  
+    'disiplines' : '24',  # computer science 24 , humanity : 11
+    # germany : 11 ,   multi : 82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21
+    'countries' : '82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21',
+    'tuituion' : '[0,7000]',
+    'duration' : '[720,720][540,540],[360,360]',
+    'attendance' : 'face2face',
+    'degree_type' : 'msc',
+    'limit' : 10000,  # should be less than or equal to 10000
+    'project_name' : 'hamed-uni-tuition-0-7000'
+}
+
+
 
 
 # project name
-project_name = 'my-uni-list'
-if name:=input("enter a name for the project (myuni-list): "):
-    project_name = name
-project_name=re.sub('[\s]','-',project_name)
+#project_name = 'my-uni-list'
+#if name:=input("enter a name for the project (myuni-list): "):
+#    project_name = name
+
+project_name=re.sub('[\s]','-',config['project_name'])
 project_name=re.sub('[^\w\d\-]','',project_name)
 output_json_path='output/json/'+project_name+'.json'
 output_xlsx_path='output/xlsx/'+project_name+'.xlsx'
  
+ 
+programs = get_all_programs(**config)
 # A List of Items
 length = len(programs)
 print("All matched diciplines : "+str(length))
@@ -292,21 +300,29 @@ cols = {
     "min_gpa_raw": {'title': "GPA MinRaw", 'width': 11},
 
     #"accept_gre":{ 'title': "-1",'width':None},
-    "density": {'title': "Density", 'width': 8},
-    "methods": {'title': "Method", 'width': 8},
+    "density": {'title': "Density", 'width': 9},
+    "methods": {'title': "Method", 'width': 9},
     "requirements": {'title': "Requirements", 'width': 13},
-    "duration": {'title': "Duration", 'width': 8},
+    "duration": {'title': "Duration", 'width': 9},
     "languages": {'title': "Langs", 'width': 10},
     "url": {'title': "Uni Link", 'width': None},
     "masterp_url": {'title': "MP Link", 'width': None},
-    "start": {'title': "Starts and Deadlines", 'width': 30},
+    "start": {'title': "Starts and Deadlines", 'width': 35},
     "tuition_fee": {'title': "Tuition", 'width': None},
     "uni_rating_avg": {'title': "Uni Rate", 'width': 10},
     "world_rank": {'title': "World Rank", 'width': 10},
     "acceptance_rate": {'title': "Acceptance",'width': 11},
 }
 
-generate_excel_file(data=output,path=output_xlsx_path,columns=cols)
+from collections import defaultdict
+
+groups = defaultdict(list)
+for obj in output:
+    for country in obj['country'].split(','):
+        groups[country].append(obj)
+ 
+
+generate_excel_file(data=groups, path=output_xlsx_path, columns=cols)
 
  
 

@@ -75,10 +75,19 @@ def generate_excel_file(**options):
     import xlsxwriter
     # Create an new Excel file and add a worksheet.
     with xlsxwriter.Workbook(options['path']) as workbook:
-        worksheet = workbook.add_worksheet()
-        worksheet.set_default_row(20)
 
         header_format = workbook.add_format()
+        header_format.set_text_wrap()
+        for country, data in options['data'].items():
+            create_work_sheet(country, data, workbook, options)
+
+# ...........
+
+def create_work_sheet(name,data, workbook, options):
+        worksheet = workbook.add_worksheet(name)
+        worksheet.set_default_row(20)
+        header_format = workbook.add_format()
+        header_format.set_text_wrap()
         header_format.set_bold()
         header_format.set_align('center')
         header_format.set_text_v_align('vcenter')
@@ -98,14 +107,12 @@ def generate_excel_file(**options):
         
         row=1
         col=0
-        for data in options['data']:
+        for atributes in data:
             for key in options['columns'].keys():
-                worksheet.write(row, col, data[key])
+                worksheet.write(row, col, atributes[key])
                 col+=1
             col=0
             row+=1
-
-# ...........
 
 
 def get_edurank(uni_name, uni_url):
@@ -119,7 +126,7 @@ def get_edurank(uni_name, uni_url):
 
     response = httpGet('https://edurank.org/uni-search?s='+org_name, timeout=5,timeoutMessage='Faild fetching edurank,use vpn.')
  
-    if(response.status_code != 200):
+    if(response and response.status_code != 200):
         raise Exception("unable to access to edurank")
     s = pQuery(response.text)
     e = s(".content table").find("tbody tr:first th a")
