@@ -126,7 +126,7 @@ def get_edurank(uni_name, uni_url):
 
     response = httpGet('https://edurank.org/uni-search?s='+org_name, timeout=5,timeoutMessage='Faild fetching edurank,use vpn.')
  
-    if(response and response.status_code != 200):
+    if(not response or response.status_code != 200):
         raise Exception("unable to access to edurank")
     s = pQuery(response.text)
     e = s(".content table").find("tbody tr:first th a")
@@ -136,7 +136,7 @@ def get_edurank(uni_name, uni_url):
     if e.length:
         #print("similarity : " + str(similarity))
         response = httpGet(edubank_url,timeout=5)
-        if(response.status_code == 200):
+        if(response and response.status_code == 200):
             s = pQuery(response.text)
 
             # university website
