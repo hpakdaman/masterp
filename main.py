@@ -1,5 +1,6 @@
+from collections import defaultdict
 from genericpath import isfile
-import requests 
+import requests
 import json
 import os
 from lib import *
@@ -72,17 +73,17 @@ def get_all_programs(**options):
         query += sep+key+'='+str(val)
         sep = '&'
 
-    response = httpGet('https://search.prtl.co/2018-07-23/'+query,timeout=6)
-    if(response.status_code!=200):
+    response = httpGet('https://search.prtl.co/2018-07-23/'+query, timeout=6)
+    if(response.status_code != 200):
         exit("unable to connect master portal!")
     programs = json.loads(response.text)
 
     def _filter(data):
-        country =set()
+        country = set()
         for item in data['venues']:
-            country.add(item['country'].lower()) 
-        data['country']=','.join(country)
- 
+            country.add(item['country'].lower())
+        data['country'] = ','.join(country)
+
         return dictionary_except(data, [
             'id',
             'title',
@@ -104,15 +105,16 @@ def get_university_rate(uni_id):
             "quantity": 32
     }
     """
-    default=     {
+    default = {
         'uni_rating_avg': None,
-        #'uni_rating_quantity': None
+        # 'uni_rating_quantity': None
     }
-    response = httpGet('https://reviews.prtl.co/v1/universities/'+str(uni_id),timeout=5)
+    response = httpGet(
+        'https://reviews.prtl.co/v1/universities/'+str(uni_id), timeout=5)
     uni = json.loads(response.text)
-    if(response.status_code==200 and uni['rating']!=None):
-        default= {
-            'uni_rating_avg': str(round(uni['rating']['average'], 2))+ '/'+ str(uni['rating']['quantity'])
+    if(response.status_code == 200 and uni['rating'] != None):
+        default = {
+            'uni_rating_avg': str(round(uni['rating']['average'], 2)) + '/' + str(uni['rating']['quantity'])
         }
 
     return default
@@ -127,7 +129,7 @@ def get_program(id):
 
     while True:
         response = httpGet('https://reflector.prtl.co/?length=0&include_order=false&token=' +
-                                token+'&q=id-'+str(id)+'&path=data%2Fstudies%2Fany%2Fdetails%2F',timeout=5)
+                           token+'&q=id-'+str(id)+'&path=data%2Fstudies%2Fany%2Fdetails%2F', timeout=5)
         if(response.status_code == 200):
             break  # Data fetched
         if(response.status_code == 401):
@@ -153,7 +155,7 @@ def get_program(id):
         'gpa_scale',
         'min_gpa',
         'min_gpa_raw',
-        #'application_deadline',
+        # 'application_deadline',
         'accept_gre',
         # 'entry_level',
         # 'requirements',
@@ -166,7 +168,8 @@ def get_program(id):
     program['methods'] = ','.join(data['methods'])
 
     # tidy requirements
-    program['requirements'] = html2text(data['requirements']).replace('\n',os.linesep)
+    program['requirements'] = html2text(
+        data['requirements']).replace('\n', os.linesep)
 
     # duration
     program['duration'] = data['fulltime_duration'] + \
@@ -175,18 +178,21 @@ def get_program(id):
     # language fully or partially
     sep = ''
     if 'fully' in data['languages'] and len(data['languages']['fully']):
-        program['languages'] = sep+'full_' + list(data['languages']['fully'].values())[0]['title'].lower()
+        program['languages'] = sep+'full_' + \
+            list(data['languages']['fully'].values())[0]['title'].lower()
         sep = ','
 
     if 'partially' in data['languages'] and len(data['languages']['partially']):
-        program['languages'] = sep+'part_' + list(data['languages']['partially'].values())[0]['title'].lower()
+        program['languages'] = sep+'part_' + \
+            list(data['languages']['partially'].values())[0]['title'].lower()
         sep = ','
 
     # link
     program['url'] = list(data['links'].values())[0]['url']
 
     #  master portal link
-    program['masterp_url'] = 'https://www.mastersportal.com/studies/'+str(data['id'])
+    program['masterp_url'] = 'https://www.mastersportal.com/studies/' + \
+        str(data['id'])
 
     # deadline
     sep = ''
@@ -211,52 +217,52 @@ def get_program(id):
 # ...........
 
 
-config={  
-    'disiplines' : '24',  # computer science 24 , humanity : 11
+config = {
+    'disiplines': '24',  # computer science 24 , humanity : 11
     # germany : 11 ,   multi : 82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21
-    'countries' : '82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21',
-    'tuituion' : '[0,7000]',
-    'duration' : '[720,720][540,540],[360,360]',
-    'attendance' : 'face2face',
-    'degree_type' : 'msc',
-    'limit' : 10000,  # should be less than or equal to 10000
-    'project_name' : 'hamed-uni-tuition-0-7000'
+    'countries': '82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21',
+    'tuituion': '[0,7000]',
+    'duration': '[720,720],[540,540],[360,360]',
+    'attendance': 'face2face',
+    'degree_type': 'msc',
+    'limit': 10000,  # should be less than or equal to 10000
+    'project_name': 'hamed-uni-tuition-0-7000-2'
 }
-
-
 
 
 # project name
 #project_name = 'my-uni-list'
-#if name:=input("enter a name for the project (myuni-list): "):
+# if name:=input("enter a name for the project (myuni-list): "):
 #    project_name = name
 
-project_name=re.sub('[\s]','-',config['project_name'])
-project_name=re.sub('[^\w\d\-]','',project_name)
-output_json_path='output/json/'+project_name+'.json'
-output_xlsx_path='output/xlsx/'+project_name+'.xlsx'
- 
- 
+project_name = re.sub('[\s]', '-', config['project_name'])
+project_name = re.sub('[^\w\d\-]', '', project_name)
+output_json_path = 'output/json/'+project_name+'.json'
+output_xlsx_path = 'output/xlsx/'+project_name+'.xlsx'
+
+
 programs = get_all_programs(**config)
 # A List of Items
 length = len(programs)
+if(length == 0):
+    exit("noting found!")
 print("All matched diciplines : "+str(length))
 
 # Initial call to print 0% progress
-i=0
+i = 0
 do_progress(i, length)
 
-output=[]
-available_keys=[]
+output = []
+available_keys = []
 # load last inserted data to output
 try:
-    fp=open(output_json_path,'r')
-    data=json.load(fp)
+    fp = open(output_json_path, 'r')
+    data = json.load(fp)
     fp.close()
     for program in data:
-        key=program['id'] 
+        key = program['id']
         if(key not in available_keys):
-            available_keys.append(key)   
+            available_keys.append(key)
             output.append(program)
 except:
     pass
@@ -270,36 +276,37 @@ for program in programs:
         program = program | get_university_rate(program['organisation_id'])
         del program['organisation_id']
         # merge some data from edurank
-        program = program | get_edurank(program['organisation'], program['url'])
+        program = program | get_edurank(
+            program['organisation'], program['url'])
 
         output.append(program)
 
-        fp=open(output_json_path,'w')
-        json.dump(output,fp)
+        fp = open(output_json_path, 'w')
+        json.dump(output, fp)
         fp.close()
 
     # Update Progress Bar
-    i+=1
-    do_progress(i, length) 
+    i += 1
+    do_progress(i, length)
 
 
 cols = {
-    #"id": {'title': "ID", 'width': 6},
+    # "id": {'title': "ID", 'width': 6},
     "title": {'title': "Program", 'width': 35},
     "organisation": {'title': "Uni", 'width': 25},
     "country": {'title': "Country", 'width': 8},
     "ielts": {'title': "Ielts", 'width': 4},
     "toefl_internet": {'title': "IBT", 'width': 4},
     "presence": {'title': "Presence", 'width': 7},
-    #"level":{ 'title': "master",'width':None},
+    # "level":{ 'title': "master",'width':None},
     "degree": {'title': "Degree", 'width': 7},
     "ects_credits": {'title': "ECTs", 'width': 6},
-    #"gpa_required":{ 'title': "GPA Need",'width':None},
+    # "gpa_required":{ 'title': "GPA Need",'width':None},
     "gpa_scale": {'title': "GPA SC", 'width': 11},
     "min_gpa": {'title': "GPA Min", 'width': 11},
     "min_gpa_raw": {'title': "GPA MinRaw", 'width': 11},
 
-    #"accept_gre":{ 'title': "-1",'width':None},
+    # "accept_gre":{ 'title': "-1",'width':None},
     "density": {'title': "Density", 'width': 9},
     "methods": {'title': "Method", 'width': 9},
     "requirements": {'title': "Requirements", 'width': 13},
@@ -311,22 +318,14 @@ cols = {
     "tuition_fee": {'title': "Tuition", 'width': None},
     "uni_rating_avg": {'title': "Uni Rate", 'width': 10},
     "world_rank": {'title': "World Rank", 'width': 10},
-    "acceptance_rate": {'title': "Acceptance",'width': 11},
+    "acceptance_rate": {'title': "Acceptance", 'width': 11},
 }
 
-from collections import defaultdict
 
 groups = defaultdict(list)
 for obj in output:
     for country in obj['country'].split(','):
         groups[country].append(obj)
- 
+
 
 generate_excel_file(data=groups, path=output_xlsx_path, columns=cols)
-
- 
-
-
-    
-
- 
