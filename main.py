@@ -7,9 +7,23 @@ from lib import *
 from requests.models import Response
 from html2text import html2text
 from progress import do_progress
+import math
+all_countries = {}
+with open('data/countries.json') as f:
+    all_countries = json.load(f)
 
 
-# ...........
+def get_countries_id(countries):
+    found = []
+    for c in countries:
+        found.append(
+            next(country for country in all_countries
+                 if country['name'].lower() == c.lower())['id']
+        )
+    return found
+    # ...........
+
+
 def get_all_programs(**options):
     """
     Gets all of available programs base on some filters
@@ -20,7 +34,8 @@ def get_all_programs(**options):
         attendance      =>      mh-face2face    [facee2face: on campus learning]
         format          =>      de-fulltime
         currency        =>      tc-USD          [EUR,USD]
-        duration        =>      dur-[720,720]   [[720,720]: 2 year , [540,540]: 1.5 year ,[360,360]: 1 year]tuituion fee    =>      tr-[1000,5000]  [[from,to]]
+        duration        =>      dur-[720,720]   [[720,720]: 2 year , [540,540]: 1.5 year ,[360,360]: 1 year]
+        tuituion fee    =>      tr-[1000,5000]  [[from,to]]
         limit           =>      &size=20
     """
     filters = {
@@ -29,13 +44,16 @@ def get_all_programs(**options):
         # 'uc':'', # User Country
         # 'ur':'', # User Region
     }
-    params = {'size': '10000'}
+    params = {'size': '100'}
 
     if 'disiplines' in options:
         filters['di'] = options['disiplines']
 
     if 'countries' in options:
-        filters['ci'] = options['countries']
+        filters['ci'] = options['countries'] 
+
+    if 'region' in options:
+        filters['rg'] = options['region']
 
     if 'degree_type' in options:
         filters['dg'] = options['degree_type']
@@ -57,8 +75,8 @@ def get_all_programs(**options):
     if 'tuituion' in options:
         filters['tr'] = options['tuituion']
 
-    if 'limit' in options:
-        params['size'] = options['limit']
+    # if 'limit' in options:
+    #     params['size'] = options['limit']
 
     # format queris like 'key-val1,val2|...'
     query = '?q='
@@ -73,25 +91,46 @@ def get_all_programs(**options):
         query += sep+key+'='+str(val)
         sep = '&'
 
-    response = httpGet('https://search.prtl.co/2018-07-23/'+query, timeout=6)
-    if(response.status_code != 200):
-        exit("unable to connect master portal!")
-    programs = json.loads(response.text)
+
+    response = httpGet('https://search-facets.prtl.co/'+query+'&facets=["dg"]', timeout=6)
+    info = json.loads(response.text)
+    total = int(info['dg'][filters['dg']])
+
+    # How many items to list per page
+    limit = int(params['size'])
+
+    # How many pages will there be
+    pages = math.ceil(total / limit)
+
+    programs=[]
+    for i in range(0, pages):
+        #print('loop:' + str(i))
+        response = httpGet('https://search.prtl.co/2018-07-23/'+query+'&start='+str(i * limit), timeout=6)
+        if(response.status_code != 200):
+            exit("unable to connect master portal! " + "("+response.text+")")
+        programs = programs+ json.loads(response.text)
 
     def _filter(data):
         country = set()
         for item in data['venues']:
             country.add(item['country'].lower())
-        data['country'] = ','.join(country)
+        data['countries_formated'] = ','.join(country)
 
-        return dictionary_except(data, [
+        # append countries
+        data['countries'] = get_countries_id(country)
+
+        if 'logo' not in data:
+            data['logo'] = ''
+        return dictionary_only(data, [
             'id',
             'title',
             # 'tuition_fee',
             # 'fulltime_duration',
             'organisation_id',
             'organisation',
-            'country'
+            'countries_formated',
+            'countries',
+            # 'logo'
         ])
 
     return list(map(_filter, programs))
@@ -137,10 +176,11 @@ def get_program(id):
             token = update_token()
 
     data = json.loads(response.text)[str(id)]
-    program = dictionary_except(data, [
+    program = dictionary_only(data, [
         'title',
-        'summery',
+        'summary',
         # 'description',
+        # 'contents',
         'ielts',
         'toefl_internet',
         'toefl_paper',
@@ -161,10 +201,13 @@ def get_program(id):
         # 'requirements',
     ])
 
-    # merge density
+    # append density
     program['density'] = ','.join(data['density'])
 
-    # merge nethod
+    # append disciplines
+    program['disciplines'] = list(data['disciplines'].keys())
+
+    # append nethod
     program['methods'] = ','.join(data['methods'])
 
     # tidy requirements
@@ -174,6 +217,10 @@ def get_program(id):
     # duration
     program['duration'] = data['fulltime_duration'] + \
         ' ' + data['fulltime_duration_period']
+
+    program['duration_month'] = int(data['fulltime_duration'] if data['fulltime_duration'] else '0') * \
+        (12 if (data['fulltime_duration_period'] ==
+         'year' or data['fulltime_duration_period'] == 'years') else 1)
 
     # language fully or partially
     sep = ''
@@ -209,8 +256,8 @@ def get_program(id):
             sep = os.linesep
 
     # tuition_fee_types
-    program['tuition_fee'] = next((item for item in data['tuition_fee_types']
-                                  if item['target'] == 'international'), {'amount': None})['amount']
+    program['tuition_fee'] = int(next((item for item in data['tuition_fee_types']
+                                       if item['target'] == 'international'), {'amount': None})['amount'])
 
     return dict(program)
 
@@ -218,16 +265,18 @@ def get_program(id):
 
 
 config = {
-    'disiplines': '24',  # computer science 24 , humanity : 11
+    'disiplines': '24',  # computer science 24 , humanity : 11 , hci : 284
     # germany : 11 ,   multi : 82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21
-    'countries': '82,202,56,1,6,4,10,14,19,11,20,24,9,7,3,26,8,21',
-    'tuituion': '[0,7000]',
+    #'countries': '82,11,202,56,1,6,4,10,14,19,15,20,24,9,7,3,26,8,21', #
+    'countries':'1,24,15,12,3,34,6,7,14,82,11,56,202,9,19,21,26,30', # best counrties
+    'tuituion': '[0,15000]',
     'duration': '[720,720],[540,540],[360,360]',
     'attendance': 'face2face',
     'degree_type': 'msc',
     'limit': 10000,  # should be less than or equal to 10000
-    'project_name': 'hamed-uni-tuition-0-7000-2'
 }
+
+config['project_name'] = 'programs-'+config['disiplines']+'-'+config['tuituion']
 
 
 # project name
@@ -242,6 +291,7 @@ output_xlsx_path = 'output/xlsx/'+project_name+'.xlsx'
 
 
 programs = get_all_programs(**config)
+
 # A List of Items
 length = len(programs)
 if(length == 0):
@@ -276,8 +326,8 @@ for program in programs:
         program = program | get_university_rate(program['organisation_id'])
         del program['organisation_id']
         # merge some data from edurank
-        program = program | get_edurank(
-            program['organisation'], program['url'])
+        # program = program | get_edurank(
+        #    program['organisation'], program['url'])
 
         output.append(program)
 
@@ -294,38 +344,35 @@ cols = {
     # "id": {'title': "ID", 'width': 6},
     "title": {'title': "Program", 'width': 35},
     "organisation": {'title': "Uni", 'width': 25},
-    "country": {'title': "Country", 'width': 8},
+    # "countries_formated": {'title': "countries_formated", 'width': 8},
     "ielts": {'title': "Ielts", 'width': 4},
     "toefl_internet": {'title': "IBT", 'width': 4},
     "presence": {'title': "Presence", 'width': 7},
     # "level":{ 'title': "master",'width':None},
-    "degree": {'title': "Degree", 'width': 7},
+    # "degree": {'title': "Degree", 'width': 7},
     "ects_credits": {'title': "ECTs", 'width': 6},
     # "gpa_required":{ 'title': "GPA Need",'width':None},
-    "gpa_scale": {'title': "GPA SC", 'width': 11},
-    "min_gpa": {'title': "GPA Min", 'width': 11},
-    "min_gpa_raw": {'title': "GPA MinRaw", 'width': 11},
+    # "gpa_scale": {'title': "GPA SC", 'width': 11},
+    "min_gpa": {'title': "GPA m", 'width': 6},
+    # "min_gpa_raw": {'title': "GPA MinRaw", 'width': 11},
 
     # "accept_gre":{ 'title': "-1",'width':None},
-    "density": {'title': "Density", 'width': 9},
-    "methods": {'title': "Method", 'width': 9},
+    # "density": {'title': "Density", 'width': 9},
+    # "methods": {'title': "Method", 'width': 9},
     "requirements": {'title': "Requirements", 'width': 13},
-    "duration": {'title': "Duration", 'width': 9},
+    # "duration": {'title': "Duration", 'width': 9},
     "languages": {'title': "Langs", 'width': 10},
     "url": {'title': "Uni Link", 'width': None},
     "masterp_url": {'title': "MP Link", 'width': None},
-    "start": {'title': "Starts and Deadlines", 'width': 35},
+    # "start": {'title': "Starts and Deadlines", 'width': 35},
     "tuition_fee": {'title': "Tuition", 'width': None},
     "uni_rating_avg": {'title': "Uni Rate", 'width': 10},
-    "world_rank": {'title': "World Rank", 'width': 10},
-    "acceptance_rate": {'title': "Acceptance", 'width': 11},
+    # "world_rank": {'title': "World Rank", 'width': 10},
+    # "acceptance_rate": {'title': "Acceptance", 'width': 11},
 }
-
 
 groups = defaultdict(list)
 for obj in output:
-    for country in obj['country'].split(','):
+    for country in obj['countries_formated'].split(','):
         groups[country].append(obj)
-
-
 generate_excel_file(data=groups, path=output_xlsx_path, columns=cols)
